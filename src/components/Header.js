@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import {FaShoppingCart} from 'react-icons/fa';
 import Order from './Order';
 const showOrders = (props) => {
   return(
@@ -25,7 +24,7 @@ export default function Header(props) {
           <img src='./images/shopping-logo-svgrepo-com.svg'/>
           <span>Shop</span>
           <ul>
-            <li onClick={() => setCartOpen(active = !active)} className={`cart ${active && 'active'}`}><FaShoppingCart/></li>
+            <li onClick={() => setCartOpen(active = !active)} className={`cart ${active && 'active'}`}></li>
             {active && (
               <div className='cart-opened'>
                 {props.orders.length > 0 ? showOrders(props) : showNothing()}
