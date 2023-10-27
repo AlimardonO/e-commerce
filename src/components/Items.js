@@ -5,7 +5,9 @@ export class Items extends Component {
       <main>
         {this.props.items.map(el => (
           <div key={el.id} className="items">
-            <div><img src={'./images/' + el.img} /></div>
+            <div className='imagediv'>
+              <img src={'./images/' + el.img} />
+            </div>
             <div className='itemdiv'>
               <p className='title'>{el.title}</p>
               <p>{el.desc}</p>

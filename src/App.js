@@ -3,7 +3,7 @@ import Header from './components/Header';
 import Items from './components/Items';
 
 export class App extends Component {
-  constructor(props){
+  constructor(props) {
     super(props)
     this.state = {
       orders: [],
@@ -62,14 +62,14 @@ export class App extends Component {
   }
   render() {
     return (
-      <div>
-        <Header orders={this.state.orders}/>
-        <Items items={this.state.items} onAdd={this.itemAdd}/>
+      <div className='wrapper'>
+        <Header orders={this.state.orders} />
+        <Items items={this.state.items} onAdd={this.itemAdd} />
       </div>
     )
   }
-  itemAdd(item){
-    this.setState({orders: [...this.state.orders, item]})
+  itemAdd(item) {
+    this.setState({ orders: [...this.state.orders, item] })
   }
 }
 
